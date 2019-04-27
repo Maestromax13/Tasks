@@ -6,8 +6,8 @@
 //Fizz Buzz
 // for(let n = 1; n <= 100 ; n++){
 //   let output = "";
-//   if(n % 3 == 0 ) output += 'Tri';
-//   if(n % 5 == 0 ) output += 'Ton';
+//   if(n % 3 == 0 ) output += 'Fizz';
+//   if(n % 5 == 0 ) output += 'Buzz';
 //   console.log(output || n);
   
 // }
@@ -30,3 +30,31 @@
 // }
 
 // console.log(board);
+
+
+//Sum of range
+function range(start, end, step = start < end ? 1 : -1){
+  let array = [];
+  if (step > 0 ){
+    for(let i = start; i <= end; i += step)array.push(i);
+  
+  }else {
+    for(let i = start; i >= end; i += step)array.push(i)
+  } 
+  return array;
+}
+
+function sum(array){
+  let total = 0;
+  for(let value of array){
+    total += value;
+  }
+    return total;
+  }
+
+  console.log(sum(range(5,10)));
+  
+
+
+
+ 
